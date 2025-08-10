@@ -5,6 +5,8 @@ import math
 #Declaring Variables
 input_text = 0 #User reply to input prompt
 remaining_digits  = 0 #Remaining digits after calculation
+i = 58 #Counter
+
 
 #Num_to_Formula Variables
 num1 = 0 #First number in the formula
@@ -13,11 +15,10 @@ num2 = 0 #Second number in the formula
 
 #Decaring Functions
 def Num_to_Formula(remaining_digits): # Convert Number to a formula
-    
+    math.log(remaining_digits, 2)
     #calculate the formula
-    global num1, num2
     num1 = math.sqrt(remaining_digits) #
-
+math.pow(remaining_digits, i)
 
 
 
