@@ -1,17 +1,31 @@
+#import libraries
+import math
+
+
 #Declaring Variables
-reply = 0 #User reply to input prompt
-int = 0 #Converted Text As Intiger
-formula = ("abc", "12c3", "12c3", "12cqwce", "casdw") #Formula as result
+input_text = 0 #User reply to input prompt
 remaining_digits  = 0 #Remaining digits after calculation
 
+#Num_to_Formula Variables
+num1 = 0 #First number in the formula
+num2 = 0 #Second number in the formula
+
+
+#Decaring Functions
+def Num_to_Formula(remaining_digits): # Convert Number to a formula
+    
+    #calculate the formula
+    global num1, num2
+    num1 = math.sqrt(remaining_digits) #
 
 
 
-def func1(int): #Rem stands for remaining digits
-    if int >= 10**20:
-        #calc math formula
-        formula = formula + ("first num", "second num")
-        
+
+    print(num1 + "^" + num2, end='') #print part of the formula
+    if remaining_digits >= 10**20:
+        Num_to_Formula(remaining_digits) #Recursively call the function with reduced remaining digits
+    print(remaining_digits) #print remaining digits if any
+    input("Press Enter to exit...")
 
 
 
@@ -22,8 +36,9 @@ def func1(int): #Rem stands for remaining digits
 
 input("1)Encode 2)Decode 3)Settings: ")
 
-func1(int) #Call function with Rem as argument
-
-print(formula[0] + "^" + formula[1], end='\r') #Replys to user
-
-
+if input_text == 1: #If user chooses to encode
+    input_text = input("Encode: ")
+    print(bin(input_text)[2:]) #Print the binary representation
+    Num_to_Formula(int(input_text, 2)) #Convert to binary then send to Num_to_Formula function
+else:
+    print("jeh34a")
