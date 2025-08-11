@@ -22,11 +22,10 @@ math.pow(remaining_digits, i)
 
 
 
-    print(num1 + "^" + num2, end='') #print part of the formula
-    if remaining_digits >= 10**20:
-        Num_to_Formula(remaining_digits) #Recursively call the function with reduced remaining digits
-    print(remaining_digits) #print remaining digits if any
-    input("Press Enter to exit...")
+print(num1 + "^" + num2, end='') #print part of the formula
+if remaining_digits >= 10**20:
+    Num_to_Formula(remaining_digits) #Recursively call the function with reduced remaining digits
+print(remaining_digits) #print remaining digits if anyinput("Press Enter to exit...")
 
 
 

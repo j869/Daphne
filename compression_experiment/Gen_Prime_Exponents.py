@@ -12,4 +12,4 @@ def generate_exponents(filename, max_base=499, max_exp=500):
 
 # Example usage:
 if __name__ == "__main__":
-    generate_exponents("exponents.csv")
+    generate_exponents("exponents.txt")
